@@ -31,19 +31,6 @@ def init(_) do
 end
 
 
-
-defp get(key) do
-  case :ets.lookup(@name, key) do
-    [] -> {:not_found}
-    [{_key, result}] -> {:found, result}
-  end
-end
-
-defp set(key, value) do
-  true = :ets.insert(@name, {key, value})
-end
-
-
 def add(content_id, user_id, action \\ :add) do
   reaction = create_reaction(content_id, user_id, action)
 
@@ -73,35 +60,40 @@ def get_content_fire_counts(content_id) do
     #check for add where remove don't occue
 end
 
-defp compute_count(list) do
+def compute_count(list) do
 
-  #remove duplicate rows
-   u_list =
-  list
-  |> Enum.uniq()
-
-   #fetch users with remove action
-  unfired  =
-  Enum.filter(u_list, fn i -> i.action == :remove end)
-  |> Enum.map(fn i -> i.user_id end)
-
-  #fetch all users with add action
-  fired =
-  Enum.filter(u_list, fn i -> i.action == :add end)
-  |> Enum.map(fn i -> i.user_id end)
+  added = list |> get_action_users(:add)
+  removed = list |> get_action_users(:remove)
 
   #remove users who fired remove
-  case fired -- unfired  do
+  case added -- removed  do
     [] -> 0
     unique_fired -> length unique_fired
   end
 
 end
 
-
-defp preppend_list(old_list, item) when is_list(old_list) do
-  [item] ++ old_list  #preppending is faster
+defp get_action_users(list, action) do
+  list
+  |> Stream.uniq
+  |> Stream.filter(fn i -> action_done?(i, action) end)
+  |> Stream.map(&(get_user_id(&1)))
+  |> Enum.to_list
 end
+
+defp action_done?(item, action), do: item.action == action
+defp get_user_id(user), do: user.user_id
+
+defp get(key) do
+  case :ets.lookup(@name, key) do
+    [] -> {:not_found}
+    [{_key, result}] -> {:found, result}
+  end
+end
+
+defp set(key, value), do: true = :ets.insert(@name, {key, value})
+
+defp preppend_list(old_list, item) when is_list(old_list), do: [item] ++ old_list  #preppending is more performant
 
 #creates the reaction payload to be added to cache
 defp create_reaction(content_id, user_id, reaction) do
@@ -113,7 +105,6 @@ defp create_reaction(content_id, user_id, reaction) do
     timestamp: DateTime.utc_now()
 }
 end
-
 
 
 end
