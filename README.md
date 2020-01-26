@@ -1,7 +1,11 @@
 # CacheX
-A phoenix based microservice that mantains an in-memory cache of users who have reacted to content.
+A simple, fast and concurrent phoenix based microservice that mantains an in-memory cache of users who have reacted to content.
 
 Think Instagram likes, Medium claps etc
+
+Using Erlang Term Storage(ETS) we are able to have a battled tested in-memory store capable of handling concurrent requests.
+
+Internally the cache handles records using Stream, a lazy operation, as opposed to the eager operations that use up too much memory
 
 
 To start your Phoenix server:
