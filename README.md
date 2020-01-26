@@ -1,4 +1,10 @@
 # CacheX
+A phoenix based microservice that mantains an in-memory cache of users who have reacted to content.
+
+Think Instagram likes, Medium claps etc
+
+
+
 
 To start your Phoenix server:
 
