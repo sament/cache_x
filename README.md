@@ -7,16 +7,8 @@ Internally the cache handles records using Stream, a lazy operation, as opposed 
 
 This showcases the use of Erlang's OTP(Open Telecom Platform) to impliment a mircoservice capable of handling thousands of concurrent request with better throughput. 
 
+======================================
 
-========================================================
-
-To start your Phoenix server:
-
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 Post reactions with post http://localhost:4000/api/v1/reaction
 
     JSON payload for adding a fire action on Stew by Sam  
@@ -45,12 +37,17 @@ Post reactions with post http://localhost:4000/api/v1/reaction
       "reaction_count": {"fire": 3}
     } 
 
-=========================================================
-NOTE: 
-    This is optimized for Single Node. 
-    No backpressure mechanism yet
-    Optimizing for backpressure will improve the performance of this microservice for lager requests.
-=========================================================
+======================================
+NOTE: This service can be optimized further for multiple nodes and backpressure
+
+
+To start your Phoenix server:
+
+  * Install dependencies with `mix deps.get`
+  * Create and migrate your database with `mix ecto.setup`
+  * Start Phoenix endpoint with `mix phx.server`
+
+Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
