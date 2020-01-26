@@ -16,7 +16,6 @@ defmodule CacheX.Cache.Storage do
 
 @name :reactions_cache
 
-
   @doc """
   Starts the table owner process
   """
