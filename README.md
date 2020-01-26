@@ -1,11 +1,35 @@
-# CacheX
-A simple, fast,  concurrent and scalable phoenix based microservice that mantains an in-memory cache of users who have reacted to content.
+# Arina
+
+
+You can also look at this as a way of answering  
+"who is doing what with that?" in your organisation.
+
+Imagine an industrial kitchen that sets gas on and off, and wants to keep track of actively engaged staff.
+When you have to monitor 5,000 employess it becomes harder. 
+How do we tackle this problem?
+
+Macros can be built with a microsoft Excel spreedsheet using Visual Basic for Application. 
+But it limits you. What if some of this entries come from IOT(internet of things) devices?
+An app can be built but...in needs to be able to handle volume effeciently.
+The business of communication always needs effeciency. 
+
+===================
+
+This experimental project takes a dive at solving this problem digitally with an API that is powered by Open Telecom Platform.
+You can image various use cases. 
+
+
+This is an Elixir implimentation of this project. 
+
+A simple, fast,  concorrent and scalable phoenix based microservice that mantains an in-memory cache of users who have reacted to content.
+
 
 Using Erlang Term Storage(ETS) we are able to have a battled tested in-memory store capable of handling concurrent requests.
-Internally the cache handles records using Stream, a lazy operation, as opposed to the eager operations that use up too much memory
+Internally the cache handles retrieving records asynconously in order to avoid waiting for other processes to complete their tasks.
+Lazy operations over eager loading.
 
 
-This showcases the use of Erlang's OTP(Open Telecom Platform) to impliment a mircoservice capable of handling thousands of concurrent request with better throughput. 
+Let's do food.
 
 ======================================
 
