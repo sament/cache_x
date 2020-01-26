@@ -26,10 +26,10 @@ A simple, fast,  concorrent and scalable phoenix based microservice that mantain
 
 Using Erlang Term Storage(ETS) we are able to have a battled tested in-memory store capable of handling concurrent requests.
 Internally the cache handles retrieving records asynconously in order to avoid waiting for other processes to complete their tasks.
-Lazy operations over eager loading.
+This aproach makes it faster. [Lazy operations over eager]
 
 
-Let's do food.
+Let's look at some food data that are transferred.
 
 ======================================
 
