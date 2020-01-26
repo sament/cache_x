@@ -3,8 +3,6 @@ A phoenix based microservice that mantains an in-memory cache of users who have 
 
 Think Instagram likes, Medium claps etc
 
-git remote add origin https://github.com/sament/cache_x.git
-
 
 To start your Phoenix server:
 
