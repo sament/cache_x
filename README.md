@@ -1,6 +1,7 @@
 # Arina (renaming the  project)
 
-=========== A USECASE
+=== A USECASE
+
 You can also look at this as a way of answering  
 "who is doing what with that?" in your organisation.
 
@@ -17,7 +18,7 @@ How do we handle entries from mobile/web apps, sensors from IOT(internet of thin
 
 Ability to handle volume effeciently is at the heart of communication.
 
-===================
+===
 
 This experimental project takes a dive at solving this problem digitally with an API that is powered by Open Telecom Platform.
 You can image various use cases. 
@@ -35,7 +36,7 @@ This aproach makes it faster. [Lazy operations over eager]
 
 Let's look at some food data that are transferred.
 
-======================================
+===
 
 Post reactions with post http://localhost:4000/api/v1/reaction
 
@@ -65,7 +66,7 @@ Post reactions with post http://localhost:4000/api/v1/reaction
       "reaction_count": {"fire": 3}
     } 
 
-======================================
+===
 NOTE: This service can be optimized further for multiple nodes and backpressure
 
 
