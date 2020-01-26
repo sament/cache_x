@@ -33,16 +33,15 @@ Post reactions with post http://localhost:4000/api/v1/reaction
         "reaction_type": "fire"
     }
 
-  A count of all users who have added fire to their Stew and not removed 
-  HTTP GET reaction/reactions_count/content_id
-  Returns
-  {
-    "content_id": "Stew",
-    "reaction_count": {"fire": 3}
+    A count of all users who have added fire to their Stew and not removed 
+    HTTP GET reaction/reactions_count/content_id
+    Returns the following response. A count of unique users who added fire reaction to Stew and did not later remove it
+    {
+      "content_id": "Stew",
+      "reaction_count": {"fire": 3}
+    } 
 
-  } 
 
-  The above response means 3 unique users have added fire to Stew without removing it
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
