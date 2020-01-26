@@ -15,13 +15,13 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 Post reactions with post http://localhost:4000/api/v1/reaction
 
-JSON payload for adding a fire action on Stew by Sam
+    JSON payload for adding a fire action on Stew by Sam  
     {
       "type": "reaction",
       "action": "add",
       "content_id": "Stew",
       "user_id": "Sam",
-        "reaction_type": "fire"
+      "reaction_type": "fire"
     }
 
     JSON payload for removing a fire action on Stew by Sam
