@@ -1,12 +1,14 @@
 # CacheX
-A simple, fast and concurrent phoenix based microservice that mantains an in-memory cache of users who have reacted to content.
-
-Think Instagram likes, Medium claps etc
+A simple, fast,  concurrent and scalable phoenix based microservice that mantains an in-memory cache of users who have reacted to content.
 
 Using Erlang Term Storage(ETS) we are able to have a battled tested in-memory store capable of handling concurrent requests.
-
 Internally the cache handles records using Stream, a lazy operation, as opposed to the eager operations that use up too much memory
 
+
+This showcases the use of Erlang's OTP(Open Telecom Platform) to impliment a mircoservice capable of handling thousands of concurrent request with better throughput. 
+
+
+========================================================
 
 To start your Phoenix server:
 
@@ -43,7 +45,12 @@ Post reactions with post http://localhost:4000/api/v1/reaction
       "reaction_count": {"fire": 3}
     } 
 
-
+=========================================================
+NOTE: 
+    This is optimized for Single Node. 
+    No backpressure mechanism yet
+    Optimizing for backpressure will improve the performance of this microservice for lager requests.
+=========================================================
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
