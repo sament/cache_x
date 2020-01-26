@@ -7,7 +7,9 @@ You can also look at this as a way of answering
 
 
 Imagine an industrial kitchen that sets gas on and off, and wants to keep track of actively engaged staff.
-When you have to monitor 5,000 employess it becomes harder. 
+
+**Tracking becomes harder as the frequency of concurrent activities increase.
+
 
 How do we tackle this problem?
 
