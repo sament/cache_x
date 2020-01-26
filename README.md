@@ -2,8 +2,8 @@
 
 === A USECASE
 
-You can also look at this as a way of answering  
-"who is doing what with that?" in your organisation.
+You can also look at this as a way of ansewering the question:
+"What is goin on?" in your organisation.
 
 
 Imagine an industrial kitchen that sets gas on and off, and wants to keep track of actively engaged staff.
