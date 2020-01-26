@@ -1,17 +1,21 @@
-# Arina
+# Arina (renaming the  project)
 
-
+=========== A USECASE
 You can also look at this as a way of answering  
 "who is doing what with that?" in your organisation.
 
+
 Imagine an industrial kitchen that sets gas on and off, and wants to keep track of actively engaged staff.
 When you have to monitor 5,000 employess it becomes harder. 
+
 How do we tackle this problem?
 
 Macros can be built with a microsoft Excel spreedsheet using Visual Basic for Application. 
-But it limits you. What if some of this entries come from IOT(internet of things) devices?
-An app can be built but...in needs to be able to handle volume effeciently.
-The business of communication always needs effeciency. 
+But it limits you. 
+How do we handle entries from mobile/web apps, sensors from IOT(internet of things) devices?
+
+
+Ability to handle volume effeciently is at the heart of communication.
 
 ===================
 
