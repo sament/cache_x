@@ -20,21 +20,21 @@ How do we handle entries from mobile/web apps, sensors from IOT(internet of thin
 Ability to handle volume effeciently is at the heart of communication.
 
 ===
+Here is a simple, fast, concurrent and scalable Phoenix based microservice that mantains an in-memory cache of users who have reacted to content.
 
-This experimental project takes a dive at solving this problem digitally with an API that is powered by Erlang's Open Telecom Platform(OTP).
+This experimental project takes a basic dive at solving this problem digitally with an API that is powered by Erlang's Open Telecom Platform(OTP).
 You can image various use cases. 
 
-
-This is an Elixir implimentation of this project. ELixir runs on BEAM (Erlang's Virtual Machine)
+Elixir runs on BEAM (Erlang's Virtual Machine)
 
 Using Erlang Term Storage(ETS) we are able to have a battled tested in-memory store capable of handling concurrent requests.
-Internally the cache handles retrieving records asynconously in order to avoid waiting for other processes to complete their tasks.
-This aproach makes it faster. [Lazy operations over eager]
+
+
+Internally I am able to process some expensive operations asynchronously. This aproach makes execution timefaster. [Lazy operations over eager]
 
 
 
-Here is a simple, fast, concurrent and scalable Phoenix based microservice that mantains an in-memory cache of users who have reacted to content.
-Let's look at some food data that are transferred.
+Some food data
 
 ===
 
